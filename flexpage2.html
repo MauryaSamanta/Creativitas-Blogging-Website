@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alkalami&display=swap" rel="stylesheet">
+    <style>
+        .parent{
+            display:flex;
+            width:100%;
+        }
+        .box{
+            background-color:white;
+           
+            height:500px;
+            width:350px;
+            border: 1px 1px 1px 1px solid black;
+            margin:35px;
+            
+        }
+        .box:hover{
+            box-shadow:3px 3px 3px 3px #a3a8b5;
+            transition: box-shadow 0.5s;
+
+        }
+        .imgh{
+            width:350px;
+            height:200px;
+            border:none;
+        }
+        h3{
+            text-align:left;
+            font-family: 'Alkalami', serif;
+            font-size:30px;
+            margin:0px;
+            padding-left:15px;
+            padding-right:15px;
+            padding-top:15px;
+        }
+        p{
+            padding:10px;
+            margin:0px;
+        }
+        .button{
+            background-color:grey;
+            color:white;
+            text-align:center;
+            width:150px;
+            height:20px;
+            padding:20px;
+            border-radius:5px;
+        }
+        .button:hover{
+            box-shadow:1px 1px 1px 1px black;
+            transition:box-shadow 0.5s;
+            cursor:pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="parent">
+       <div class="box">
+        <img src="picscenery.jpg" alt="" class="imgh">
+        <h3>Seamlessly Visualise Quality</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam accusantium quidem quo a vero ipsam provident rem molestias nemo eius?</p>
+        <center><div class="button">
+            <span>Here's Why</span>
+        </div>
+        </center>
+       </div>
+       <div class="box">
+        <img src="ps2.jpeg" alt="" class="imgh">
+        <h3>Completely Synergize</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum obcaecati animi laboriosam pariatur. Omnis quaerat sed sint accusantium. Quia, ipsa!</p>
+        <center><div class="button">
+            <span>Here's how</span>
+        </div></center>
+       </div>
+    </div>
+</body>
+</html>

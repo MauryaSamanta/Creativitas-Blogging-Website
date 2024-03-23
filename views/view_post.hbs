@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="/view_post_style.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Signika+Negative&display=swap" rel="stylesheet">
+
+    <title>Creativitas.</title>
+</head>
+<body>
+    <span for="" class="view_title">{{k.title}}</span><br>
+    <hr class="line">
+    <!-- Display the blog post content -->
+    <img src="heart.png" alt="" class="likes_icon">
+         <a class="likes_amt">4</a>
+<div id="editor">
+
+
+  {{k.text}}
+</div>
+<br><br>
+<script src="/src/socket.js"></script>
+<div class="label">COMMENTS</div>
+   <div class="comment-form">
+    
+    <textarea name="" id="" class="textarea" rows="5"></textarea><br>
+    <button class="sub-btn">Post</button>
+   </div>
+   <div class="com-sec">
+
+   </div>
+   
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+    <script src="quilleditor.js"></script>
+</body>
+</html>

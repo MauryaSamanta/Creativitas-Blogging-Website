@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="stylesheet" type="text/css" href="/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Signika+Negative&display=swap" rel="stylesheet">
+    <script >
+      function load_data()
+      {
+
+      }
+    </script>
+    <title>HOME</title>
+</head>
+<body class="home_body" onload="load_date">
+    <aside>
+        <div class="logo_home">Creativitas.</div><br>
+     <ul>
+        <li><a href="">PROFILE</a></li><br>
+        <li><a href="/new_post">CREATE POST</a></li><br>
+        <li><a href="#feed_page">YOUR FEED</a></li>
+     </ul> 
+     </aside>
+     <main id="feed_page">
+     <h1>Welcome {{data.name}}</h1>
+     {{#if data}}
+     <a href="/user_signup">SIGNUP</a>
+     {{/if}}
+     <h2>Explore your feed</h2>
+     {{#each docs}}
+      <div class="parent">
+        
+       <div class="box">
+        
+        
+        <h3 name="title">{{this.title}}</h3>
+        <!--<p>{{this.body}}</p><br>-->
+        <img src="heart.png" alt="" class="likes_icon">
+         <a class="likes_amt">4</a>
+         <p class="author">{{this.author}}</p>
+         
+            
+            <a class="link" href="/view_post/{{this.title}}">Read More</a>
+            
+            
+       
+       </div>
+      {{/each}}
+       
+    </div>
+    
+    
+     </main>
+     
+
+
+
+    
+</body>
+</html>
