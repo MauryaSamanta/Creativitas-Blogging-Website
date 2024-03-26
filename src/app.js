@@ -45,6 +45,13 @@ const blogpost={
 
 };
 const blog_note=mongoose.model("blogs", blogpost);
+const comments={
+    author:String,
+    blog_title:String,
+    comment:String
+};
+const comment_note=mongoose.model("comments",comments);
+
 /*const usercreate={
      
     name: String,
@@ -164,14 +171,34 @@ app.get("/view_post/:t", async(req,res)=>{
    //var for_text=blog.body;
    // for_text=JSON.stringify(for_text,null,2);
    if(blog)
-   {var data={  
+   {var k={  
     title:t,     
     text: blog.body,       
     com:blog.comments,   
     like:blog.likes 
    };
-   res.render("view_post",{k:data});}
-}) 
+   var comm=await comment_note.find({blog_title:t}).then(docs=>{
+    console.log(docs);
+    res.render("view_post",{k,docs});
+   });
+   }
+});
+app.post("/add_comment/:c", async(req,res)=>{
+    var c=req.params.c;
+    console.log(c);
+    try {
+        let newcomment=new comment_note({
+            author: req.body.author,
+            blog_title:c,
+            comment:req.body.comment
+
+        });
+        newcomment.save();
+        
+    } catch (error) {
+        
+    }
+})
 app.post("/home", async(req,res)=>{
     //var blogs=await blog_note.findOne({publish:"1"});
       
