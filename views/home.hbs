@@ -20,16 +20,20 @@
     <aside>
         <div class="logo_home">Creativitas.</div><br>
      <ul>
-        <li><a href="">PROFILE</a></li><br>
+        
         <li><a href="/new_post">CREATE POST</a></li><br>
-        <li><a href="#feed_page">YOUR FEED</a></li>
+        <li><a href="#feed_page">YOUR FEED</a></li><br>
+        {{#if data}}
+         <li><a id="signup-btn" href="/user_signup">{{data.name}}</a></li><br>
+         {{else}}
+         <li><a id="signup-btn" href="/user_signup">SIGN UP</a></li>
+         {{/if}}
      </ul> 
      </aside>
      <main id="feed_page">
      <h1>Welcome {{data.name}}</h1>
-     {{#if data}}
-     <a href="/user_signup">SIGNUP</a>
-     {{/if}}
+    
+     
      <h2>Explore your feed</h2>
      {{#each docs}}
       <div class="parent">

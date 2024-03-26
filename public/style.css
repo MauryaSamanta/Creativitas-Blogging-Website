@@ -71,6 +71,9 @@ main{
     flex:1;
     padding:20px;
 }
+#signup-btn{
+    margin-top: 450px;
+}
 .logo_home{
     font-family: 'Open Sans', sans-serif;
 font-family: 'Roboto', sans-serif;
@@ -205,17 +208,23 @@ p{
       
       
 }
+.new_post input{
+  background-color: rgb(210, 216, 225);
+}
+.new_post textarea{
+    background-color: rgb(210, 216, 225);
+  }
 .title{
     border: 1px solid black;
     border-radius:5px;
-    width:100%;
+    width:1200px;
     height:50px;
     font-size:30px;
 }
 .categories{
     border: 1px solid black;
     border-radius:5px;
-    width:100%;
+    width:1200px;
     height:20px;
     
 }
@@ -249,7 +258,7 @@ margin-top:10px;
 }
 #save{
     height:300px;
-    width:1420px;
+    width:1200px;
     border-radius:10px;
     padding:30px;
     font-family: 'Open Sans', sans-serif;
@@ -261,4 +270,7 @@ margin-top:10px;
     font-family: 'Roboto', sans-serif;
 font-family: 'Signika Negative', sans-serif;
 font-size:100px;
+}
+.new_post_body{
+    background-color: #789b9b;
 }
